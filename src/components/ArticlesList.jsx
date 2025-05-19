@@ -22,7 +22,7 @@ function ArticlesList() {
 
   return (
     <div className="article-list">
-      <h2>Articles</h2>
+      <h2>All Articles</h2>
       <ul>
         {articles.map((article) => {
           return (
@@ -30,6 +30,7 @@ function ArticlesList() {
               key={article.article_id}
               img={article.article_img_url}
               title={article.title}
+              article_id={article.article_id}
             />
           );
         })}
