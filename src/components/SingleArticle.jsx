@@ -3,6 +3,7 @@ import { getSingleArticle } from "../../utils/api";
 import { useParams } from "react-router-dom";
 import Comments from "./Comments";
 import ArticleVote from "./ArticleVote";
+import AddComment from "./AddComment";
 
 function SingleArticle() {
   const [sglArticle, setSglArticle] = useState({});
@@ -39,6 +40,7 @@ function SingleArticle() {
       <ArticleVote votes={sglArticle.votes} articleId={sglArticle.article_id} />
       <div></div>
       <Comments comments={comments} setComments={setComments} />
+      <AddComment articleId={sglArticle.articleId} setComments={setComments}/>
     </div>
   );
 }

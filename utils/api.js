@@ -31,3 +31,11 @@ export const patchArticleVotes = (articleId, increment) => {
       return res.data.votes;
     });
 };
+
+export const postComment = (articleId)=> {
+  return newsApi
+  .post(`/articles/${articleId}`)
+  .then((res)=> {
+    return res.data.comment;
+  })
+}
