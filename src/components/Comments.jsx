@@ -1,7 +1,7 @@
 import { useEffect} from "react";
 import { getArticlesCommentsById } from "../../utils/api";
 import { useParams } from "react-router-dom";
-import "./comments.css"
+import "./comments-css.css"
 
 function Comments({comments, setComments}){
 
