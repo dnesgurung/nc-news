@@ -16,3 +16,8 @@ export const getSingleArticle = (articleId)=> {
     })
 }
 
+export const getArticlesCommentsById = (articleId)=> {
+  return newsApi.get(`/articles/${articleId}/comments`).then((res)=> {
+    return res.data.comments;
+  })
+}

@@ -1,0 +1,24 @@
+.comments_container {
+    width: 100%
+}
+
+.comment-list{
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+.comment-list h6{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.comment-body{
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.comment-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
