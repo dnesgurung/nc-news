@@ -10,14 +10,24 @@ export const getAllArticles = () => {
   });
 };
 
-export const getSingleArticle = (articleId)=> {
-    return newsApi.get(`/articles/${articleId}`).then((res)=> {
-        return res.data.article;
-    })
-}
+export const getSingleArticle = (articleId) => {
+  return newsApi.get(`/articles/${articleId}`).then((res) => {
+    return res.data.article;
+  });
+};
 
-export const getArticlesCommentsById = (articleId)=> {
-  return newsApi.get(`/articles/${articleId}/comments`).then((res)=> {
+export const getArticlesCommentsById = (articleId) => {
+  return newsApi.get(`/articles/${articleId}/comments`).then((res) => {
     return res.data.comments;
-  })
-}
+  });
+};
+
+export const patchArticleVotes = (articleId, increment) => {
+  return newsApi
+    .get(`/articles/${articleId}`, {
+      inc_votes: increment,
+    })
+    .then((res) => {
+      return res.data.votes;
+    });
+};
