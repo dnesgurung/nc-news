@@ -1,0 +1,32 @@
+.vote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.vote-btns {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.vote-btns buttons {
+  text-align: center;
+  background: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.vote-feedback {
+  font-size: 0.9rem;
+  text-align: center;
+}
