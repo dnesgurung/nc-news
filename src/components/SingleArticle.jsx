@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { getSingleArticle } from "../../utils/api";
 import { useParams } from "react-router-dom";
+import Comments from "./Comments";
 
 
 function SingleArticle (){
@@ -8,9 +9,10 @@ function SingleArticle (){
     const [sglArticle, setSglArticle] = useState({});
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
+    const [comments, setComments] = useState([]);
 
     const { articleId } = useParams();
-    console.log(articleId);
+  
 
     useEffect(()=> {
         setIsLoading(true);
@@ -35,11 +37,14 @@ function SingleArticle (){
             <p>By : {sglArticle.author}</p>
             <p>Created at: {new Date(sglArticle.created_at).toLocaleDateString()}</p>
             <p>{sglArticle.body}</p>
+        <div>
 
         </div>
+        <Comments comments={comments} setComments={setComments}/>
+        </div>
+     
+
     )
-
-
 }
 
 export default SingleArticle;
