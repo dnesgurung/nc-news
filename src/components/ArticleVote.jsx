@@ -7,7 +7,6 @@ function ArticleVote({ votes, articleId}) {
   const [isError, setIsError] = useState(false);
   const [hasVoted, setHasVoted] = useState(false);
 
-  console.log(articleId)
   const currentVoteCount = votes;
 
   function handleVotes(voteOnArticle) {
