@@ -1,26 +1,22 @@
-
-.comment-container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-   
-    align-items: center;
-   
+.comment-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.comment-area{
-    height: 75px;
-    width: 465px;
-    
+.comment-area {
+  height: 75px;
+  width: 465px;
 }
 
-.post-comment-btn{
-    height: 40px;
-    width: 80px;
-    font-size: 1.05rem;
-    margin-top: 10px;
-    background-color: rgb(74, 74, 253);
-    color: white;
-    border-style: none;
-    cursor: pointer;
+.post-comment-btn {
+  height: 40px;
+  width: 80px;
+  font-size: 1.05rem;
+  margin-top: 10px;
+  background-color: rgb(74, 74, 253);
+  color: white;
+  border-style: none;
+  cursor: pointer;
 }
