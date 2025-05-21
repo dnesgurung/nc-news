@@ -5,6 +5,7 @@
 .comment-list{
     font-weight: 400;
     margin-top: 1.5rem;
+    list-style-type: none;
 }
 
 .comment-list h6{
@@ -23,3 +24,11 @@
     align-items: center;
 }
 
+ul li:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: 10px;
+    background: #f00;
+}
