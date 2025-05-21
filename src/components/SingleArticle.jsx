@@ -40,7 +40,7 @@ function SingleArticle() {
       <ArticleVote votes={sglArticle.votes} articleId={sglArticle.article_id} />
       <div></div>
       <Comments comments={comments} setComments={setComments} />
-      <AddComment articleId={sglArticle.articleId} setComments={setComments}/>
+      <AddComment articleId={sglArticle.article_id} setComments={setComments}/>
     </div>
   );
 }

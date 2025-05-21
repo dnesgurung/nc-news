@@ -2,27 +2,23 @@ import { useState } from "react";
 import { patchArticleVotes } from "../../utils/api";
 import "./articleVote.css";
 
-function ArticleVote({ votes, articleId }) {
-  const [voteCount, setVoteCount] = useState(votes);
+function ArticleVote({ votes, articleId}) {
+  const [voteCount, setVoteCount] = useState(0);
   const [isError, setIsError] = useState(false);
   const [hasVoted, setHasVoted] = useState(false);
 
-  function handleIncrementalArticleVote() {
-    if (!hasVoted) {
-      setHasVoted(true);
-      patchArticleVotes(votes).catch(() => {
-        setVoteCount(voteCount + 1);
-        setIsError(true);
-        setHasVoted(false);
-      });
-    }
-  }
+  console.log(articleId)
+  const currentVoteCount = votes;
 
-  function handleDecrementalArticleVote() {
+  function handleVotes(voteOnArticle) {
     if (!hasVoted) {
+      const newVoteCount = currentVoteCount + voteOnArticle;
+
+      setVoteCount(newVoteCount);
       setHasVoted(true);
-      patchArticleVotes(votes).catch(() => {
-        setVoteCount(voteCount - 1);
+
+      patchArticleVotes(articleId, voteOnArticle).catch(() => {
+        setVoteCount(currentVoteCount);
         setIsError(true);
         setHasVoted(false);
       });
@@ -31,20 +27,17 @@ function ArticleVote({ votes, articleId }) {
 
   return (
     <div className="vote-container">
-      <p className="article-vote">Votes: {hasVoted ? voteCount : votes} </p>
+      <p className="article-vote">Votes: {hasVoted ? voteCount : currentVoteCount} </p>
       <div className="vote">
         {hasVoted ? (
           <p className="vote-feedback">Thanks for voting!</p>
         ) : (
           <div className="vote-btns">
-            <button onClick={handleIncrementalArticleVote} className="vote-up">
+            <button onClick={() => handleVotes(1)} className="vote-up">
               👍🏻
             </button>
 
-            <button
-              onClick={handleDecrementalArticleVote}
-              className="vote-down"
-            >
+            <button onClick={() => handleVotes(-1)} className="vote-down">
               👎🏻
             </button>
           </div>
