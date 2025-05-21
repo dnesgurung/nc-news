@@ -32,9 +32,9 @@ export const patchArticleVotes = (articleId, increment) => {
     });
 };
 
-export const postComment = (articleId)=> {
+export const postComment = (articleId, newComment)=> {
   return newsApi
-  .post(`/articles/${articleId}`)
+  .post(`/articles/${articleId}/comments`)
   .then((res)=> {
     return res.data.comment;
   })
