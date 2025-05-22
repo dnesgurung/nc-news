@@ -24,7 +24,7 @@ export const getArticlesCommentsById = (articleId) => {
 
 export const patchArticleVotes = (articleId, increment) => {
   return newsApi
-    .get(`/articles/${articleId}`, {
+    .patch(`/articles/${articleId}`, {
       inc_votes: increment,
     })
     .then((res) => {
