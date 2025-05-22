@@ -12,6 +12,7 @@ function Header() {
         <Link className="navlink" to="/articles">
           Articles
         </Link>
+        <Link className="navlink" to="/topics">Categories</Link>
       </nav>
     </header>
   );
