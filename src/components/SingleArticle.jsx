@@ -35,7 +35,7 @@ function SingleArticle() {
       <img src={sglArticle.article_img_url} />
       <h2>{sglArticle.title}</h2>
       <p>By : {sglArticle.author}</p>
-      <p>Created at: {new Date(sglArticle.created_at).toLocaleDateString()}</p>
+      <p>Posted on: {new Date(sglArticle.created_at).toLocaleDateString()}</p>
       <p>{sglArticle.body}</p>
       <ArticleVote votes={sglArticle.votes} articleId={sglArticle.article_id} />
       <div></div>
