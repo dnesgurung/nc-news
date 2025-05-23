@@ -2,6 +2,8 @@ import { useState } from "react";
 import { postComment } from "../../utils/api";
 import "./addComment.css";
 
+
+
 function AddComment({ articleId, setComments }) {
   const [newComment, setNewComment] = useState("");
   const [isSuccessful, setIsSuccessful] = useState(false);

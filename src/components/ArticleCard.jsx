@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+
+
 function ArticleCard({ img, title, article_id, date, commentCount, votes}) {
   return (
     <div>
