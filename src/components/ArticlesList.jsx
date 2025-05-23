@@ -4,6 +4,8 @@ import ArticleCard from "./ArticleCard";
 import { useParams, useSearchParams } from "react-router-dom";
 import "./articlesList.css";
 
+
+
 function ArticlesList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

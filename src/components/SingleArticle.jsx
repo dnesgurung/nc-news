@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { getSingleArticle } from "../../utils/api";
 import { useParams } from "react-router-dom";
 import Comments from "./Comments";

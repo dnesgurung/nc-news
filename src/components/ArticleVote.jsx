@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { getSingleArticle, patchArticleVotes } from "../../utils/api";
 import "./articleVote.css";
+
+
 
 function ArticleVote({ votes, articleId }) {
   const [voteCount, setVoteCount] = useState(0);
