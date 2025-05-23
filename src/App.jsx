@@ -13,8 +13,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-      
-        <Route path="/articles/:topic?" element={<ArticlesList />}/>
+        <Route path="/articles/" element={<ArticlesList />}/>
+        <Route path="/topics/:topic" element={<ArticlesList />}/>
         <Route path="/articles/:articleId" element={<SingleArticle />} />
       </Routes>
     </main>

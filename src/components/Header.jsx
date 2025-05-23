@@ -13,9 +13,9 @@ function Header() {
           <Link className="navlink" to="/articles">
             Articles
           </Link>
-          <Link className="navlink" to="/articles/coding">Coding</Link>
-          <Link className="navlink" to="/articles/football">Football</Link>
-          <Link className="navlink" to="/articles/cooking">Cooking</Link>
+          <Link className="navlink" to="/topics/coding">Coding</Link>
+          <Link className="navlink" to="/topics/football">Football</Link>
+          <Link className="navlink" to="/topics/cooking">Cooking</Link>
           
         </nav>
       </div>
