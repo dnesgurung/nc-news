@@ -4,10 +4,14 @@ const newsApi = axios.create({
   baseURL: "https://dnesgurung-nc-news.onrender.com/api",
 });
 
-export const getAllArticles = () => {
-  return newsApi.get("/articles/").then((res) => {
-    return res.data.articles;
-  });
+export const getAllArticles = (topic) => {
+  return newsApi
+    .get("/articles", {
+      params: { topic: topic },
+    })
+    .then((res) => {
+      return res.data.articles;
+    });
 };
 
 export const getSingleArticle = (articleId) => {
@@ -32,18 +36,17 @@ export const patchArticleVotes = (articleId, increment) => {
     });
 };
 
-export const postComment = (articleId, newComment)=> {
+export const postComment = (articleId, newComment) => {
   return newsApi
-  .post(`/articles/${articleId}/comments`,{
-    username: "grumpy19",
-    body: newComment
-  })
-  .then((res)=> {
-    return res.data.comment;
-  })
-}
+    .post(`/articles/${articleId}/comments`, {
+      username: "grumpy19",
+      body: newComment,
+    })
+    .then((res) => {
+      return res.data.comment;
+    });
+};
 
-export const deleteComments = (comment_id)=> {
-  return newsApi
-  .delete(`/comments/${comment_id}`);
-}
+export const deleteComments = (comment_id) => {
+  return newsApi.delete(`/comments/${comment_id}`);
+};
